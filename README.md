@@ -68,7 +68,7 @@ pip install -r requirements.txt
 - Click on **Load unpacked**
 - Upload **extension** folder from source code
 
-### **Run Backend
+### **Run Backend**
 ```
 python app.py
 ```
