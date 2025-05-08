@@ -78,15 +78,14 @@ python app.py
 ## 🐛 Troubleshooting
 **Common Issues**
 1. Missing API Key
-- Ensure .env contains GROQ_API_KEY
+    - Ensure .env contains GROQ_API_KEY
 2. Rate Limits
-- Error 429 indicates rate limiting - adjust in config.py
+    - Error 429 indicates rate limiting - adjust in config.py
 3. Transcript Failures
-- Verify video has captions available
+    - Verify video has captions available
 
 ---
 
 ## 📜 License
 Distributed under the MIT License. 
 
----
