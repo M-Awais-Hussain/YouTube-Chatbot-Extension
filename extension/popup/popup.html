@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube RAG Assistant</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <img src="icons/icon128.png" alt="Logo" class="logo">
+        <div class="header-text">
+          <h1>YouTube AI Assistant</h1>
+          <div id="status" class="status-indicator">
+            <span class="status-dot"></span>
+            <span class="status-text">Ready</span>
+          </div>
+        </div>
+      </div>
+      <button id="settings-btn" class="icon-btn" title="Settings">
+        <i class="fas fa-cog"></i>
+      </button>
+    </header>
+    
+    <div id="chat-container">
+      <div id="messages">
+        <div class="welcome-message">
+          <h3>Welcome to YouTube AI Assistant!</h3>
+          <p>Ask me anything about the current video and I'll help you find the answers.</p>
+          <div class="suggestions">
+            <div class="suggestion-pill">Summarize this video</div>
+            <div class="suggestion-pill">Key points at [05:30]</div>
+            <div class="suggestion-pill">Explain the main concept</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="input-area">
+        <div class="input-wrapper">
+          <textarea id="user-input" placeholder="Ask about this video..." rows="1"></textarea>
+          <div class="input-actions">
+            <button id="mic-btn" class="icon-btn mic-btn" title="Voice input">
+              <i class="fas fa-microphone"></i>
+            </button>
+            <button id="send-btn" class="send-btn" title="Send">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+        <div class="disclaimer">
+          AI responses may not always be accurate. Verify important information.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="settings-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Settings</h3>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="setting-item">
+          <label for="api-url">API Endpoint:</label>
+          <input type="text" id="api-url" value="http://localhost:5000">
+        </div>
+        <div class="setting-item">
+          <label>
+            <input type="checkbox" id="dark-mode"> Dark Mode
+          </label>
+        </div>
+        <button id="clear-cache" class="btn-secondary">Clear Cache</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
