@@ -29,6 +29,11 @@ graph TD
     B --> C[YouTube API]
     B --> D[Groq API]
     B --> E[(Redis Cache)]
+    subgraph Backend Components
+        B --> F[Transcript Service]
+        B --> G[Vector Store]
+        B --> H[LLM Service]
+    end
 ```
 ----
 
